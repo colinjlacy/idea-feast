@@ -17,6 +17,10 @@ get '/multiple/:this/params/:that/?' do
 	"I see <strong>#{params['this']}</strong> and <strong>#{params['that']}</strong> in your route params!"
 end
 
+get '/erb/?' do
+	erb :template
+end
+
 get '*' do
 	ERROR
 end
