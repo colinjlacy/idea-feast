@@ -8,3 +8,7 @@ end
 get '/static/?' do
 	File.read(File.join('views', 'template.html'))
 end
+
+get '*' do
+	ERROR
+end
