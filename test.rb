@@ -1,7 +1,7 @@
 # myapp.rb
 require 'sinatra'
 
-get '/' do
+get '/?' do
 	File.read(File.join('views', 'template.html'))
 end
 
@@ -19,6 +19,15 @@ end
 
 get '/erb/?' do
 	erb :template
+end
+
+get '/erb/:thing/?' do
+	erb :variables, :locals => {:variable => params['thing']}
+end
+
+get '/vars/?' do
+	@variable = 'New Variable!!'
+	erb :instance
 end
 
 get '*' do
