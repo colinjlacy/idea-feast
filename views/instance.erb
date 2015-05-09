@@ -16,7 +16,11 @@
 	</div>
 	<hr/>
 	<h2 class="text-center">And your dynamic content is:</h2>
-	<h3 class="text-center text-info"><%= @variable %></h3>
+	<ul class="lead">
+	  <li>name: <%= @variable[:name] %></li>
+	  <li>class: <%= @variable[:class] %></li>
+	  <li>language: <%= @variable[:language] %></li>
+	</ul>
   </div>
 </div>
 

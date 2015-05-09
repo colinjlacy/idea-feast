@@ -26,7 +26,11 @@ get '/erb/:thing/?' do
 end
 
 get '/vars/?' do
-	@variable = 'New Variable!!'
+	@variable = {
+		name: "Colin",
+		class: "TTS",
+		language: "Ruby"
+	}
 	erb :instance
 end
 
