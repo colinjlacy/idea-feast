@@ -35,5 +35,5 @@ get '/vars/?' do
 end
 
 get '*' do
-	ERROR
+	status 404
 end
