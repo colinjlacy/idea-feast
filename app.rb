@@ -2,6 +2,6 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
 
-class Post < ActiveRecord::Base
+class Ideas < ActiveRecord::Base
 
 end
