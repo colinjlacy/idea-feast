@@ -16,3 +16,8 @@ get "/" do
 	@ideas = Ideas.order("likes DESC")
 	erb :"ideas"
 end
+
+post "/" do
+	Ideas.create(:title => params[:idea_title], :body => params[:idea_body], :likes => 0)
+	redirect '/'
+end
