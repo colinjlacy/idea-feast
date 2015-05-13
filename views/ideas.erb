@@ -48,7 +48,7 @@
 			<hr/>
 			<h3 class="text-muted"><%= idea.title %></h3>
 			<p><%= idea.body %></p>
-			<p class="text-heavy"><% idea.likes %> Likes</p>
+			<p class="text-heavy"><%= idea.likes %> Likes</p>
 			<form class="form text-center" action="/like/<%= idea.id %>" method="post">
 			  <button type="submit" class="btn btn-sm btn-success">Like it!</button>
 			</form>

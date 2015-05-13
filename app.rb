@@ -21,3 +21,9 @@ post "/" do
 	Ideas.create(:title => params[:idea_title], :body => params[:idea_body], :likes => 0)
 	redirect '/'
 end
+
+post "/like/:id" do
+	idea = Ideas.find(params[:id])
+	idea.update(:likes => (idea[:likes] + 1))
+	redirect '/'
+end
