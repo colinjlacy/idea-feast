@@ -5,3 +5,4 @@ require './environments'
 class Ideas < ActiveRecord::Base
 
 end
+
